@@ -4,6 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 12px 0px
 }
 
 .menu {
