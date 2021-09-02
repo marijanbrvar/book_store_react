@@ -1,11 +1,23 @@
 /* eslint-disable no-plusplus */
-import * as actions from '../actionTypes';
-
 let lastId = 0;
+const ADD_BOOK = 'addBook';
+const REMOVE_BOOK = 'removeBook';
+
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  payload: book,
+});
+
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: {
+    id,
+  },
+});
 
 export default function reducer(state = [], action) {
   switch (action.type) {
-    case actions.ADD_BOOK:
+    case ADD_BOOK:
       return [
         ...state,
         {
@@ -18,7 +30,7 @@ export default function reducer(state = [], action) {
           chapter: action.payload.chapter,
         },
       ];
-    case actions.REMOVE_BOOK:
+    case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
     default:
       return state;

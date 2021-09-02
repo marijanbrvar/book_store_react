@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import store from './redux/configStore';
-import { addBook, removeBook } from './redux/books/actions';
+import { addBook, removeBook } from './redux/books';
 
 const unsubscribe = store.subscribe(() => {
   console.log('Change', store.getState());

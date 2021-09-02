@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import reducer from './books/book';
+import reducer from './books';
 
 const store = createStore(reducer);
 
