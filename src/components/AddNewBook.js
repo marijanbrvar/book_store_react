@@ -22,9 +22,9 @@ const AddNewBook = () => {
             e.preventDefault();
             const book = {
               title: form.title.value,
+              author: form.author.value,
               category: form.category.value,
               pages: 100,
-              author: 'NA',
               completed: 0,
               chapter: 0,
             };
@@ -33,6 +33,7 @@ const AddNewBook = () => {
           }}
         >
           <input type="text" name="title" placeholder="Title" required />
+          <input type="text" name="author" placeholder="Author" required />
           <select name="category" required>
             {category}
           </select>

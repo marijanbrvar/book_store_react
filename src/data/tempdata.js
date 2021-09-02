@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 const initData = [
   {
-    id: 0,
+    id: 10000,
     title: 'LOTR The Fellowship of the Ring',
     category: 'Fantasy',
     author: 'J.R.R. Tolkien',
@@ -10,7 +10,7 @@ const initData = [
     chapter: 4,
   },
   {
-    id: 1,
+    id: 10001,
     title: 'LOTR The Two Towers',
     category: 'Fantasy',
     author: 'J.R.R. Tolkien',
@@ -19,7 +19,7 @@ const initData = [
     chapter: 1,
   },
   {
-    id: 2,
+    id: 10002,
     title: 'LOTR The Return of the King',
     category: 'Fantasy',
     author: 'J.R.R. Tolkien',
