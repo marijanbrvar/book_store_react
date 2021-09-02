@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link]() TBA
 
 
 ## Getting Started
@@ -39,13 +39,7 @@ To run code locally, please follow steps belove
 2. run `npm install`
 3. then run `npm run start`
 
-### Install
-
 ### Usage
-
-
-
-
 
 ## Authors
 

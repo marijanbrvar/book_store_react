@@ -1,0 +1,23 @@
+.new-book {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+.new-book-title {
+  flex-grow: 2;
+  height: 30px;
+}
+
+.new-book-cat,
+.submit-btn {
+  flex-grow: 1;
+}
