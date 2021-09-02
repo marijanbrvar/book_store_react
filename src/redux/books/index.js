@@ -1,4 +1,6 @@
 /* eslint-disable no-plusplus */
+import intiData from '../../data/tempdata';
+
 let lastId = 0;
 const ADD_BOOK = 'addBook';
 const REMOVE_BOOK = 'removeBook';
@@ -15,7 +17,7 @@ export const removeBook = (id) => ({
   },
 });
 
-export default function reducer(state = [], action) {
+export default function reducer(state = intiData, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [
