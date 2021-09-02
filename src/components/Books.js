@@ -1,10 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Book from './Book';
+import AddNewBook from './AddNewBook';
 
 const Books = () => {
   const state = useSelector((state) => state);
-  const books = state.books.map((book) => (
+  const bookList = state.books.map((book) => (
     <div key={book.id}>
       <Book
         title={book.title}
@@ -17,7 +18,12 @@ const Books = () => {
     </div>
   ));
 
-  return books;
+  return (
+    <>
+      {bookList}
+      <AddNewBook />
+    </>
+  );
 };
 
 export default Books;
