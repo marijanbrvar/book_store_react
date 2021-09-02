@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => (
@@ -5,8 +7,8 @@ const Header = () => (
     <div className="menu">
       <div>Book store</div>
       <ul>
-        <li>Books</li>
-        <li>Categories</li>
+        <li><Link to="/">Books</Link></li>
+        <li><Link to="/categories">Categories</Link></li>
       </ul>
     </div>
     <div>
