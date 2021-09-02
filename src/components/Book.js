@@ -1,13 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/button-has-type */
-import './book.css';
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import './book.css';
 
 const Book = (props) => {
   const {
-    title, category, author, completed, chapter,
+    title, category, pages, author, completed, chapter,
   } = props;
 
   return (
@@ -15,13 +12,17 @@ const Book = (props) => {
       <div>
         <div className="book-info">
           <div>{category}</div>
-          <div>{title}</div>
+          <div>
+            {title}
+            {' '}
+            {pages}
+          </div>
           <div>{author}</div>
         </div>
         <div className="book-actions">
-          <a>Comments</a>
-          <a>Remove</a>
-          <a>Edit</a>
+          <li>Comments</li>
+          <li>Remove</li>
+          <li>Edit</li>
         </div>
       </div>
       <div className="book-stat">
@@ -37,7 +38,7 @@ const Book = (props) => {
           Current
           {chapter}
         </div>
-        <button>Update progress</button>
+        <div>Update progress</div>
       </div>
     </div>
   );
@@ -45,10 +46,11 @@ const Book = (props) => {
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  pages: PropTypes.number.isRequired,
   completed: PropTypes.number.isRequired,
-  chapter: PropTypes.string.isRequired,
+  chapter: PropTypes.number.isRequired,
 };
 
 export default Book;

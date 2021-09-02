@@ -6,7 +6,14 @@ const Books = () => {
   const state = useSelector((state) => state);
   const books = state.books.map((book) => (
     <div key={book.id}>
-      <Book book={book} />
+      <Book
+        title={book.title}
+        category={book.category}
+        pages={book.pages}
+        author={book.author}
+        completed={book.completed}
+        chapter={book.chapter}
+      />
     </div>
   ));
 
