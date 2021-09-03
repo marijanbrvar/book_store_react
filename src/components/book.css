@@ -1,0 +1,21 @@
+.book {
+  margin: 1em auto;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.153);
+  border-radius: 0.3rem;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-stat {
+  display: flex;
+}
+
+.book-actions {
+  display: flex;
+}
+
+.book-actions a {
+  margin: 0.5em 0.5em 0.5em 0;
+}
