@@ -14,6 +14,7 @@ const Books = () => {
         author={book.author}
         completed={book.completed}
         chapter={book.chapter}
+        id={book.id}
       />
     </div>
   ));
