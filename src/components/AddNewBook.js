@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import bookCategory from './BookCategory';
 import { addBookApi } from '../redux/middleware';
-import './addNewBook.css';
+import '../styles/addNewBook.css';
 
 const AddNewBook = () => {
   const [title, setTitle] = useState('');
@@ -26,9 +26,9 @@ const AddNewBook = () => {
         <form
           onSubmit={submitNewBook}
         >
-          <input type="text" name="title" placeholder="Title" required onChange={(e) => setTitle(e.target.value)} />
-          <input type="text" name="author" placeholder="Author" required onChange={(e) => setAuthor(e.target.value)} />
-          <select name="category" required>
+          <input className="new-book-title" type="text" name="title" placeholder="Title" required onChange={(e) => setTitle(e.target.value)} />
+          <input className="new-book-author" type="text" name="author" placeholder="Author" required onChange={(e) => setAuthor(e.target.value)} />
+          <select className="new-book-cat" name="category" required>
             {bookCategory()}
           </select>
 

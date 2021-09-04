@@ -9,8 +9,8 @@ const genBookList = () => {
         title={v[0].title}
         author={v[0].author || 'Author'}
         category={v[0].category}
-        completed={32}
-        chapter="chapter"
+        completed={45}
+        chapter={1}
         id={k}
         key={k}
       />
