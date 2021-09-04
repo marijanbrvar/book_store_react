@@ -19,3 +19,7 @@
 .book-actions a {
   margin: 0.5em 0.5em 0.5em 0;
 }
+
+.book-actions ul li {
+  list-style: none;
+}

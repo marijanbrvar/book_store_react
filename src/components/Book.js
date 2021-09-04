@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books';
+import { removeBookApi } from '../redux/middleware';
 import './book.css';
 
 const Book = (props) => {
   const dispatch = useDispatch();
   const {
-    title, category, pages, author, completed, chapter, id,
+    title, category, author, completed, chapter, id,
   } = props;
 
-  const delBook = (e) => dispatch(removeBook(parseInt(e.target.id, 10)));
+  const delBook = (e) => dispatch(removeBookApi(e.target.id));
 
   return (
     <div className="book">
@@ -19,23 +19,23 @@ const Book = (props) => {
           <div>{category}</div>
           <div>
             {title}
-            {' '}
-            {pages}
           </div>
           <div>{author}</div>
         </div>
         <div className="book-actions">
-          <li>Comments</li>
-          <li>
-            <button
-              type="button"
-              id={id}
-              onClick={delBook}
-            >
-              Remove
-            </button>
-          </li>
-          <li>Edit</li>
+          <ul>
+            <li>Comments</li>
+            <li>
+              <button
+                type="button"
+                id={id}
+                onClick={delBook}
+              >
+                Remove
+              </button>
+            </li>
+            <li>Edit</li>
+          </ul>
         </div>
       </div>
       <div className="book-stat">
@@ -58,13 +58,12 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  pages: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
   completed: PropTypes.number.isRequired,
-  chapter: PropTypes.number.isRequired,
+  chapter: PropTypes.string.isRequired,
 };
 
 export default Book;

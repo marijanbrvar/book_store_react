@@ -1,13 +1,26 @@
-/* eslint-disable no-plusplus */
-import intiData from '../../data/tempdata';
+const initialState = {};
 
-let lastId = 0;
-const ADD_BOOK = 'addBook';
-const REMOVE_BOOK = 'removeBook';
+const ADD_BOOK = 'bookStore/books/addBook';
+const REMOVE_BOOK = 'bookStore/books/removeBook';
+const UPDATE = 'bookStore/books/updateBooks';
 
-export const addBook = (book) => ({
+export function loadBooks(apiState) {
+  return {
+    type: UPDATE,
+    payload: apiState,
+  };
+}
+
+export const addBook = (title, author, category, id) => ({
   type: ADD_BOOK,
-  payload: book,
+  payload: {
+    title,
+    author,
+    category,
+    completed: 0,
+    chapter: 'Category',
+    id,
+  },
 });
 
 export const removeBook = (id) => ({
@@ -17,23 +30,21 @@ export const removeBook = (id) => ({
   },
 });
 
-export default function reducer(state = intiData, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
-      return [
-        ...state,
-        {
-          id: ++lastId,
-          title: action.payload.title,
-          category: action.payload.category,
-          author: action.payload.author,
-          pages: action.payload.pages,
-          completed: action.payload.completed,
-          chapter: action.payload.chapter,
-        },
-      ];
+    {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState[action.payload.id] = [action.payload];
+      return newState;
+    }
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+    {
+      const { [action.payload.id]: r, ...newState } = state;
+      return newState;
+    }
+    case UPDATE:
+      return action.payload;
     default:
       return state;
   }

@@ -1,27 +1,19 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import Book from './Book';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { loadBooksApi } from '../redux/middleware';
 import AddNewBook from './AddNewBook';
+import genBookList from './BooksList';
 
 const Books = () => {
-  const state = useSelector((state) => state);
-  const bookList = state.books.map((book) => (
-    <div key={book.id}>
-      <Book
-        title={book.title}
-        category={book.category}
-        pages={book.pages}
-        author={book.author}
-        completed={book.completed}
-        chapter={book.chapter}
-        id={book.id}
-      />
-    </div>
-  ));
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadBooksApi());
+  }, []);
 
   return (
     <>
-      {bookList}
+      {genBookList()}
       <AddNewBook />
     </>
   );
