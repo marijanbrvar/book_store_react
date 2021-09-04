@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBookApi } from '../redux/middleware';
-import './book.css';
+import '../styles/book.css';
 
 const Book = (props) => {
   const dispatch = useDispatch();
@@ -14,19 +14,18 @@ const Book = (props) => {
 
   return (
     <div className="book">
-      <div>
+      <div className="book-main">
         <div className="book-info">
           <div>{category}</div>
-          <div>
-            {title}
-          </div>
-          <div>{author}</div>
+          <div className="book-title">{title}</div>
+          <div className="book-author">{author}</div>
         </div>
         <div className="book-actions">
           <ul>
             <li>Comments</li>
             <li>
               <button
+                className="btn"
                 type="button"
                 id={id}
                 onClick={delBook}
@@ -39,19 +38,32 @@ const Book = (props) => {
         </div>
       </div>
       <div className="book-stat">
-        <div>{completed}</div>
-        <div>
-          <div>{completed}</div>
+        <div className="chart">
+          <svg>
+            <circle cx="50" cy="50" r="44" />
+            <circle cx="50" cy="50" r="44" />
+          </svg>
+        </div>
+        <div className="book-stat-value">
+          <div>
+            {completed}
+            %
+          </div>
           <div>Completed</div>
         </div>
       </div>
       <div className="book-update">
-        <div>Current Chapter</div>
         <div>
-          Current
-          {chapter}
+          <div>Current Chapter</div>
+          <div className="book-chapter">
+            Chapter
+            {' '}
+            {chapter}
+          </div>
         </div>
-        <div>Update progress</div>
+        <div>
+          <button type="button" className="update-progress">Update progress</button>
+        </div>
       </div>
     </div>
   );
@@ -63,7 +75,7 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   completed: PropTypes.number.isRequired,
-  chapter: PropTypes.string.isRequired,
+  chapter: PropTypes.number.isRequired,
 };
 
 export default Book;

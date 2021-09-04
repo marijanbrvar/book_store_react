@@ -18,7 +18,7 @@ export const addBook = (title, author, category, id) => ({
     author,
     category,
     completed: 0,
-    chapter: 'Category',
+    chapter: 'Introduction',
     id,
   },
 });

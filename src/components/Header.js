@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import '../styles/Header.css';
 
 const Header = () => (
   <header>
@@ -11,9 +11,7 @@ const Header = () => (
         <li><Link to="/categories">Categories</Link></li>
       </ul>
     </div>
-    <div>
-      User
-    </div>
+    <div className="user-icon" />
   </header>
 );
 
