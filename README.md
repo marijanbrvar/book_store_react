@@ -1,12 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Bookstore
 
-> One paragraph statement about the project.
+> The bookStore is the MVP version that allows you to:  Display a list of books. Add a book. Remove a selected text. It was created with React using Redux.
 
 ![screenshot](./app_screenshot.png)
 
 ## About
+Another Bookstore single-page Web App where users can easily add new books. Your text will be saved to the remote repository and listed on the web app by entering the book title, author name, and genre.
 
 
 ## Built With
@@ -17,16 +18,16 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link]() TBA
 
 
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the current project doesn't require testing.**
 
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow these simple example steps.
 
 ### Prerequisites
 - Chrome browser
@@ -35,17 +36,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 To run code locally, please follow steps belove
-1. `git clone git@github.com:marijanbrvar/BookStore.git && cd math-magicians-app`
+1. `git clone git@github.com:marijanbrvar/book_store_react.git && cd book_store_react`
 2. run `npm install`
 3. then run `npm run start`
 
-### Install
-
 ### Usage
-
-
-
-
 
 ## Authors
 

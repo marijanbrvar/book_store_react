@@ -1,0 +1,59 @@
+.new-book {
+  padding: 20px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-book h3 {
+  color: #888;
+  padding-bottom: 0.9rem;
+}
+
+.new-book-cat {
+  height: 40px;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  border-radius: 4px;
+  color: gray;
+}
+
+.new-book-title .new-book-author .new-book-cat {
+  background-color: #fff;
+  height: 30px;
+  flex-grow: 2;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+.new-book-title {
+  flex-grow: 2;
+  height: 40px;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  border-radius: 4px;
+}
+
+.new-book-author {
+  height: 40px;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background: #0075ce;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  flex-grow: 1;
+  height: 40px;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  border-radius: 4px;
+}
