@@ -7,7 +7,7 @@ import './book.css';
 const Book = (props) => {
   const dispatch = useDispatch();
   const {
-    title, category, pages, author, completed, chapter, id,
+    title, category, author, completed, chapter, id,
   } = props;
 
   const delBook = (e) => dispatch(removeBook(parseInt(e.target.id, 10)));
@@ -19,8 +19,6 @@ const Book = (props) => {
           <div>{category}</div>
           <div>
             {title}
-            {' '}
-            {pages}
           </div>
           <div>{author}</div>
         </div>
@@ -58,13 +56,12 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  pages: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
   completed: PropTypes.number.isRequired,
-  chapter: PropTypes.number.isRequired,
+  chapter: PropTypes.string.isRequired,
 };
 
 export default Book;

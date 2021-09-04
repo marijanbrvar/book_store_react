@@ -1,9 +1,17 @@
 /* eslint-disable no-plusplus */
-import intiData from '../../data/tempdata';
+const initialState = {};
 
 let lastId = 0;
-const ADD_BOOK = 'addBook';
-const REMOVE_BOOK = 'removeBook';
+const ADD_BOOK = 'bookStore/books/addBook';
+const REMOVE_BOOK = 'bookStore/books/removeBook';
+const UPDATE = 'bookStore/books/updateBooks';
+
+export function loadBooks(apiState) {
+  return {
+    type: UPDATE,
+    payload: apiState,
+  };
+}
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
@@ -17,7 +25,7 @@ export const removeBook = (id) => ({
   },
 });
 
-export default function reducer(state = intiData, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [
@@ -34,6 +42,8 @@ export default function reducer(state = intiData, action) {
       ];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
+    case UPDATE:
+      return action.payload;
     default:
       return state;
   }

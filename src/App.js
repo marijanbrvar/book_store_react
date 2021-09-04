@@ -13,7 +13,7 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path="/">
-          <Books name="Max" />
+          <Books />
         </Route>
         <Route path="/categories">
           <Categories message="Under Construction" />
