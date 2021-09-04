@@ -39,7 +39,10 @@ export default function reducer(state = initialState, action) {
       return newState;
     }
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+    {
+      const { [action.payload.id]: r, ...newState } = state;
+      return newState;
+    }
     case UPDATE:
       return action.payload;
     default:
