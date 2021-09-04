@@ -22,7 +22,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
-  padding: 0 0 .5em 0;
+  padding: 0 0 0.5em 0;
 }
 
 .book-title {
@@ -40,7 +40,8 @@
   margin-right: 3rem;
 }
 
-.book-stat svg, circle {
+.book-stat svg,
+circle {
   width: 112px;
   height: 112px;
   align-items: center;
@@ -56,9 +57,18 @@
 
 .chart circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 45) / 100);
-  stroke: #0075ce;;
+  stroke: #0075ce;
   animation: percent 1.5s linear;
   animation-delay: 1s;
+}
+
+.book-update div:first-child {
+  font-family: 'Roboto Slab', serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
 }
 
 .book-stat .book-stat-value div:first-child {
@@ -78,7 +88,7 @@
 .book-actions {
   margin-top: 2em;
   display: flex;
-  flex-grow: 1  ;
+  flex-grow: 1;
 }
 
 .book-actions ul li {
@@ -91,8 +101,9 @@
 }
 
 .book-actions ul li:first-child {
-  margin-left: 0em;
+  margin-left: 0;
 }
+
 .book-actions ul li:last-child {
   border: none;
 }
@@ -115,15 +126,6 @@
   justify-content: space-between;
 }
 
-.book-update div:first-child {
-  font-family: 'Roboto Slab', serif;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 0.5em;
-}
-
 .book-update .book-chapter {
   font-family: 'Roboto Slab', serif;
   font-size: 1.2rem;
@@ -133,7 +135,7 @@
   width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 0.85rem;
-  background-color: #0075ce;;
+  background-color: #0075ce;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
   padding: 0.5em;

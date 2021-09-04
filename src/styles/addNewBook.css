@@ -9,6 +9,15 @@
   padding-bottom: 0.9rem;
 }
 
+.new-book-cat {
+  height: 40px;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  border-radius: 4px;
+  color: gray;
+}
+
 .new-book-title .new-book-author .new-book-cat {
   background-color: #fff;
   height: 30px;
@@ -37,15 +46,6 @@ form {
   border-radius: 4px;
 }
 
-.new-book-cat {
-  height: 40px;
-  font-size: 1em;
-  padding: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.214);
-  border-radius: 4px;
-  color: gray;
-}
-
 .submit-btn {
   background: #0075ce;
   color: white;
@@ -53,7 +53,6 @@ form {
   font-weight: 600;
   flex-grow: 1;
   height: 40px;
-  font-size: 1em;
   padding: 0.5em;
   border: 1px solid rgba(0, 0, 0, 0.214);
   border-radius: 4px;
